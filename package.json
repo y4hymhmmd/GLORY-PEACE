@@ -1,0 +1,15 @@
+{
+  "name": "GLORY PEACE",
+  "version": "0.1",
+  "description": "beta",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i src/input.css -o dist/output.css --watch"
+  },
+  "author": "Cloudy",
+  "license": "GPRP License",
+  "devDependencies": {
+    "tailwindcss": "^3.3.5"
+  }
+}
