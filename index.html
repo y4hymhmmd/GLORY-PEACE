@@ -16,7 +16,7 @@
 
 <body class="bg-[#1a1b26] font-Rajdhani relative overflow-hidden">
 <!-- Overlay untuk efek loading -->
-    <div class="overlay">
+    <div class="overlay hidden">
         <div class="loader">
             <div class="box1"></div>
             <div class="box2"></div>
@@ -74,8 +74,8 @@
                 </div>
 
                 <!-- Teks Sedang dan Tombol Discord -->
-                <div class="text-white text-center mt-5">
-                    <a href="https://link-to-your-discord"
+                <div class="text-white text-center mt-5 hover:scale-105 active:scale-95 transition-transform">
+                    <a href="https://discord.gg/glorypeacerp"
                         class="mt-2 inline-block px-10 py-4 bg-blue-500 text-white rounded-lg font-semibold text-2xl">LETS
                         PLAY ON SAMP</a>
                 </div>
@@ -133,7 +133,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         // Menampilkan overlay saat halaman dimuat
         const overlay = document.querySelector('.overlay');
-        const loaderContainer = document.querySelector('.loader-container');
+        const loaderContainer = document.querySelector('.overlay');
 
         overlay.style.display = 'flex';
         setTimeout(function () {
@@ -149,8 +149,10 @@
             loaderContainer.style.transform = 'translateY(-50px)';
             setTimeout(function () {
                 overlay.style.display = 'none';
+                loaderContainer.style.zIndex = '0'; // Set z-index to 0 after loading
             }, 1000);
         }, 3000);
     });
+
 </script>
 </html>
