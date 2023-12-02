@@ -15,6 +15,17 @@
 </head>
 
 <body class="bg-[#1a1b26] font-Rajdhani relative overflow-hidden">
+<!-- Overlay untuk efek loading -->
+    <div class="overlay">
+        <div class="loader">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </div>
+    </div>
+<!-- Konten halaman web Anda di sini -->
+
+<!-- Skrip JavaScript untuk menampilkan atau menyembunyikan overlay -->
 
     <!-- Video Background -->
     <div class="absolute inset-0 z-0">
@@ -118,5 +129,28 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 </style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Menampilkan overlay saat halaman dimuat
+        const overlay = document.querySelector('.overlay');
+        const loaderContainer = document.querySelector('.loader-container');
 
+        overlay.style.display = 'flex';
+        setTimeout(function () {
+            overlay.style.opacity = '1';
+            loaderContainer.style.opacity = '1';
+            loaderContainer.style.transform = 'translateY(0)';
+        }, 100);
+
+        // Menyembunyikan overlay dan loader setelah 3 detik
+        setTimeout(function () {
+            overlay.style.opacity = '0';
+            loaderContainer.style.opacity = '0';
+            loaderContainer.style.transform = 'translateY(-50px)';
+            setTimeout(function () {
+                overlay.style.display = 'none';
+            }, 1000);
+        }, 3000);
+    });
+</script>
 </html>
