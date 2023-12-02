@@ -753,6 +753,10 @@ video {
   font-weight: 600;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .tracking-tighter {
   letter-spacing: -0.05em;
 }
