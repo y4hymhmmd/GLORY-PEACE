@@ -15,7 +15,7 @@
 </head>
 
 <body class="bg-[#1a1b26] font-Rajdhani relative overflow-hidden">
-<!-- Overlay untuk efek loading -->
+    <!-- Overlay untuk efek loading -->
     <div class="overlay hidden">
         <div class="loader">
             <div class="box1"></div>
@@ -23,9 +23,9 @@
             <div class="box3"></div>
         </div>
     </div>
-<!-- Konten halaman web Anda di sini -->
+    <!-- Konten halaman web Anda di sini -->
 
-<!-- Skrip JavaScript untuk menampilkan atau menyembunyikan overlay -->
+    <!-- Skrip JavaScript untuk menampilkan atau menyembunyikan overlay -->
 
     <!-- Video Background -->
     <div class="absolute inset-0 z-0">
@@ -75,9 +75,9 @@
 
                 <!-- Teks Sedang dan Tombol Discord -->
                 <div class="text-white text-center mt-5 hover:scale-105 active:scale-95 transition-transform">
-                    <a href="https://discord.gg/glorypeacerp"
+                    <button id="connect"
                         class="mt-2 inline-block px-10 py-4 bg-blue-500 text-white rounded-lg font-semibold text-2xl">LETS
-                        PLAY ON SAMP</a>
+                        PLAY ON SAMP</button>
                 </div>
             </div>
 
@@ -154,5 +154,16 @@
         }, 3000);
     });
 
+    const ipInput = "170.187.198.55:7008";
+    const connectButton = document.getElementById("connect");
+
+    connectButton.addEventListener("click", () => {
+        const ip = ipInput;
+
+        // Buka aplikasi SAMP
+        window.open("samp://" + ip);
+    });
+
 </script>
+
 </html>
